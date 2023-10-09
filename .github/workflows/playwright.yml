@@ -19,4 +19,4 @@ jobs:
       - name: Install Playwright
         run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
       - name: Run tests
-        run: mvn test -DAPI_KEY=${{ secrets.API_KEY }} -DUI_URL={{ vars.UI_URL }}
+        run: mvn test -DAPI_KEY=${{ secrets.API_KEY }} -DUI_URL=${{ vars.UI_URL }}
